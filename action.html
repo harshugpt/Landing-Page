@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conferencing page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="public/Assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="max-width">
+                <div class="logo">
+                    <img src="public/Assets/images/play-button.png">
+                </div>
+                <ul class="menu">
+                    <li><a href="#" class="btn">
+                        <i class="material-icons">home</i>
+                    </a></li>
+                    <li><a href="#" class="btn">
+                        <i class="material-icons">feedback</i>
+                    </a></li>
+                    <li><a href="#" class="btn">
+                        <i class="material-icons">videocam</i>
+                    </a></li>
+                    <li><a href="#" class="btn">
+                        <i class="material-icons">description</i>
+                    </a></li>
+                    <li><a href="#" class="btn">
+                        <i class="material-icons">settings</i>
+                    </a></li>
+                </ul>
+                <div class="vol">
+                    <input type="range" min="0" max="100" value="60" id="volume" onchange="change_sound()">
+                    <i class="material-icons" id="volume_icon" onclick="mute_sound()">volume_down</i>
+                </div>
+            </div>
+        </nav>
+        <section class="screen" id="screen">
+            <div class="max-width">
+                <div class="main">
+                    <div class="title">
+                        <span id="title">Group Meeting</span>
+                        <div><i class="material-icons">people</i><p>Team</p></div>
+                        <div class="pop-up"><p>Share :</p><span id="join-code"> abcd-efgh-adcd</span></div>
+                    </div>
+                    <div class="function">
+                        <div class=invite>
+                            <i class="material-icons">group</i><p>Invited to the call :</p><span id="count-of-people"> 0</span>
+                        </div>
+                        <div class="add">
+                            <i class="material-icons" onclick="popup()">add</i><p>Add user to the call</p>
+                        </div>
+                    </div>
+                    <div class="main-content">
+                        <div class="left">
+                            <div class="top-content">
+                                <div class="top-left">
+                                    <img src="public/Assets/images/depositphotos_409618478-stock-photo-confused-young-woman-pink-hair.jpg">
+                                    <div>
+                                        <p>Hosted By</p>
+                                        <h4 id="host">ABC</h4>
+                                    </div>
+                                </div>
+                                <div class="top-middle">
+                                    <i class="material-icons">
+                                        fiber_manual_record
+                                    </i><span id="time">00:00</span>
+                                </div>
+                            </div>
+                            <div class="middle-content">
+                                <div class="me">
+                                    <img src="public/Assets/images/portrait-smiling-woman-trendy-dyed-hair-colorful-background.jpeg">
+                                    <!--<video autoplay muted></video>-->
+                                </div>
+                            </div>
+                            <div class="bottom-content">
+                                <button class="ss-btn" onclick="ss_toggle()"><i class="material-icons">screen_share</i></button>
+                                <button class="mic-btn" onclick="mic_toggle()"><i class="material-icons">mic</i></button>
+                                <button class="end-btn" onclick="end_call()"><i class="material-icons">call_end</i></button>
+                                <button class="video-btn" onclick="video_toggle()"><i class="material-icons">videocam</i></button>
+                                <button class="rec-btn" onclick="rec_toggle()"><i class="material-icons">graphic_eq</i></button>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <div class="other">
+                                <img src="public/Assets/images/istockphoto685132223-612x612.jpg">
+                                <!--<video autoplay muted></video>-->
+                                <div class="mic"><i class="material-icons">mic</i></div>
+                            </div>
+                            <div class="other">
+                                <img src="public/Assets/images/istockphoto-1268654991-170667a.jpg">
+                                <!--<video autoplay muted></video>-->
+                                <div class="mic"><i class="material-icons">mic</i></div>
+                            </div>
+                            <div class="other">
+                                <img src="public/Assets/images/images2.jpeg">
+                                <!--<video autoplay muted></video>-->
+                                <div class="mic"><i class="material-icons">mic</i></div>
+                            </div>
+                            <div class="other">
+                                <img src="public/Assets/images/images3.jpeg">
+                                <!--<video autoplay muted></video>-->
+                                <div class="mic"><i class="material-icons">mic</i></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="public/Assets/jss/script.js">
+    </script>
+</body>
+</html>
